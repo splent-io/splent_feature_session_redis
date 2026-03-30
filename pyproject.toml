@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_session_redis"
-version = "1.0.0"
+version = "1.0.1"
 readme = "README.md"
 requires-python = ">=3.13"
 
@@ -23,33 +23,30 @@ exclude = ["*.tests", "*.tests.*"]
 [tool.splent]
 cli_version = "1.1.1"
 
-# ── Feature Contract ──────────────────────────────────────────────────────────
-# Declares what this feature provides to and requires from the product.
-# Used by `splent feature:check` and `splent product:derive` for validation.
+# ── Feature Contract (auto-generated) ────────────────────────────────────────
+# Do not edit manually — re-run `splent feature:contract --write` to refresh.
 [tool.splent.contract]
 description = "Redis-backed session storage via Flask-Session"
 
 [tool.splent.contract.provides]
-routes = []
+routes     = []
 blueprints = ["session_redis_bp"]
-models = []
-services = []
-signals = []
-hooks = []
-docker = []
-commands = []
+models     = []
+commands   = []
+hooks      = []
+services   = []
+signals    = []
+translations = []
+docker     = []
 
 [tool.splent.contract.requires]
-features = ["redis"]
-env_vars = []
-signals = []
+features = []
+env_vars = ["REDIS_URL"]
+signals  = []
 
-# ── Extension points ──────────────────────────────────────────────────────────
-# Declares what other features can override or extend via refinement.
-# See: splent feature:xray
 [tool.splent.contract.extensible]
-services = []
+services  = []
 templates = []
-models = []
-hooks = []
-routes = false
+models    = []
+hooks     = []
+routes    = false
