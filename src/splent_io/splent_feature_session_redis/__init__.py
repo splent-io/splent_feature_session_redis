@@ -1,8 +1,6 @@
 from splent_framework.blueprints.base_blueprint import BaseBlueprint
 
-session_redis_bp = BaseBlueprint(
-    "session_redis", __name__, template_folder="templates"
-)
+session_redis_bp = BaseBlueprint("session_redis", __name__, template_folder="templates")
 
 
 def init_feature(app):

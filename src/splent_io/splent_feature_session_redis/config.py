@@ -10,10 +10,14 @@ import redis
 
 
 def inject_config(app):
-    redis_url = app.config.get("REDIS_URL") or os.getenv("REDIS_URL", "redis://redis:6379")
+    redis_url = app.config.get("REDIS_URL") or os.getenv(
+        "REDIS_URL", "redis://redis:6379"
+    )
 
-    app.config.update({
-        "SESSION_TYPE": "redis",
-        "SESSION_PERMANENT": False,
-        "SESSION_REDIS": redis.from_url(redis_url),
-    })
+    app.config.update(
+        {
+            "SESSION_TYPE": "redis",
+            "SESSION_PERMANENT": False,
+            "SESSION_REDIS": redis.from_url(redis_url),
+        }
+    )
