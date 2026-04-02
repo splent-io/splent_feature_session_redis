@@ -1,6 +1,6 @@
-from splent_framework.blueprints.base_blueprint import BaseBlueprint
+from splent_framework.blueprints.base_blueprint import create_blueprint
 
-session_redis_bp = BaseBlueprint("session_redis", __name__, template_folder="templates")
+session_redis_bp = create_blueprint(__name__)
 
 
 def init_feature(app):

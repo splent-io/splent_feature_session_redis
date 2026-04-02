@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_session_redis"
-version = "1.0.5"
+version = "1.0.6"
 readme = "README.md"
 requires-python = ">=3.13"
 
@@ -30,7 +30,7 @@ description = "Redis-backed session storage via Flask-Session"
 
 [tool.splent.contract.provides]
 routes     = []
-blueprints = ["session_redis_bp"]
+blueprints = []
 models     = []
 commands   = []
 hooks      = []
@@ -46,7 +46,7 @@ signals  = []
 
 [tool.splent.contract.extensible]
 services  = []
-templates = []
+templates = ["session_redis/index.html"]
 models    = []
 hooks     = []
 routes    = false
