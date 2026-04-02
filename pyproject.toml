@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_session_redis"
-version = "1.0.6"
+version = "1.0.7"
 readme = "README.md"
 requires-python = ">=3.13"
 
@@ -46,7 +46,7 @@ signals  = []
 
 [tool.splent.contract.extensible]
 services  = []
-templates = ["session_redis/index.html"]
+templates = []
 models    = []
 hooks     = []
 routes    = false
