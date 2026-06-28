@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_session_redis"
-version = "1.0.7"
+version = "1.1.0"
 readme = "README.md"
 requires-python = ">=3.13"
 
@@ -41,7 +41,7 @@ docker     = []
 
 [tool.splent.contract.requires]
 features = []
-env_vars = ["REDIS_URL"]
+env_vars = ["SPLENT_APP"]
 signals  = []
 
 [tool.splent.contract.extensible]
